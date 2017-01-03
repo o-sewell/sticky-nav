@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+  background:#eeeeee;
+  font-family:'helvetica neue';
+  font-size: 1.2em;
+  font-weight: 200;
+}
+body {
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.banner {
+  height: 60vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),url('lake.jpg') bottom center no-repeat;
+  background-size: cover;
+  position relative;
+}
+
+.banner .banner__text {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%) translateY(-25%);
+  color: white;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+  font-size: 45px;
+}
+
+nav {
+  background:black;
+  top:0;
+  width: 100%;
+  transition:all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+nav .nav {
+  display: flex;
+  margin: 0;
+  padding:0;
+  list-style: none;
+  text-align: center;
+}
+
+
+.nav .nav__item {
+  flex:1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 20px 0;
+}
+
+.nav .nav__item a  {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition:all 0.2s;
+  height: 100%;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+.nav .nav__item a:hover  {
+  border-bottom: 2px solid blue;
+
+}
+
+@media(min-width: 800px) {
+  .nav .nav__item a {
+    font-size: 24px;
+  }
+}
+
+.nav .logo {
+  max-width:0;
+  overflow: hidden;
+  background: white;
+  transition: all .5s;
+}
+
+.nav .logo a {
+  color: black;
+  font-weight: 300;
+}
+
+
+/* Js when user scrolls down add this */
+.fixed-nav {
+  position: fixed;
+  box-shadow: 0 5px rgba(0,0,0,0.1)
+}
+
+/* when the js runs and the nav has the class of fixed-nav give the logo max-width */
+
+@media(min-width: 800px) {
+  .fixed-nav .logo {
+    max-width: 500px;
+  }
+}
+
+
+.wrapper {
+  max-width: 90%;
+  background: white;
+  padding: 20px 5%;
+  margin: 80px auto;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.intro .intro__p {
+ text-align: justify;
+}
+
+footer {
+  padding: 5px;
+  background: black;
+  color: white;
+  font-size: 10px;
+}
